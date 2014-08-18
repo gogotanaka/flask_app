@@ -14,11 +14,12 @@ $ cat apps/db/schema.sql | sqlite3 apps/db/pakopako.sqlite3
 
 ## Start server
 
-`$ python server.py`
+`$ sh apps/script/server.sh`
 
-or
+## Compile assets
 
-`$ python3 server.py`
+`sh apps/script/assets.sh`
+
 
 ## Directory structure
 
@@ -43,7 +44,7 @@ or
 |       |
 |       |-- css
 |           |
-|            -- application.css
+|            -- application.scss
 |       |-- js
 |           |
 |            -- angular.min.js
@@ -73,7 +74,3 @@ or
 |
  -- server.py (script for up server)
 ```
-
-## Compile assets
-
-`sh apps/script/assets.sh`

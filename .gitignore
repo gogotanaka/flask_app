@@ -1,6 +1,7 @@
 .DS_Store
 apps/__pycache__/
 apps/controllers/__pycache__/
+apps/models/__pycache__/
 
 apps/static/js/application.js
 
