@@ -7,25 +7,27 @@
         <title>Flask-MVC</title>
     </head>
     <body>
-        <div class="nav-collapse collapse">
-            <ul class="nav">
-                <li class="active"><a href="/">Home</a></li>
-                {% if g.user.is_authenticated()%}
-                    <li><a href="/new">New Todo</a></li>
-                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    　　<div id='main-container'>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    {% if g.user.is_authenticated()%}
+                        <li><a href="/new">New Todo</a></li>
+                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% endif %}
+                    {% if not g.user.is_authenticated()%}
+                        <li><a href="{{ url_for('login') }}">Login</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% macro render_error(field) %}
+                {% if field.errors %}
+                    {% for error in field.errors %}<span class='error'>{{ error }}</span>{% endfor %}
                 {% endif %}
-                {% if not g.user.is_authenticated()%}
-                    <li><a href="{{ url_for('login') }}">Login</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                {% endif %}
-            </ul>
-        </div>
-        {% macro render_error(field) %}
-            {% if field.errors %}
-                {% for error in field.errors %}<span class='error'>{{ error }}</span>{% endfor %}
-            {% endif %}
-        {% endmacro %}
-        {% block body %}{% endblock %}
+            {% endmacro %}
+            {% block body %}{% endblock %}
+            </div>
         </div>
     </body>
 </html>

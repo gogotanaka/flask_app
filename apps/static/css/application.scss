@@ -1,5 +1,14 @@
 @import 'reset';
 @import url('third_party/bootstrap.min.css');
+@import url('third_party/font-awesome.min.css');
+
+body {
+  div#main-container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 
 .done-true {
   text-decoration: line-through;
