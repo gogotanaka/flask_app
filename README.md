@@ -74,10 +74,6 @@ or
  -- server.py (script for up server)
 ```
 
-## Compile coffee
-
-`coffee -c apps/static/js/application.coffee`
-
 ## Compile assets
 
 `sh apps/script/assets.sh`
