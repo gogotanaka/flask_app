@@ -1,5 +1,5 @@
 CREATE TABLE users (
-	user_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+	user_id INTEGER PRIMARY KEY AUTOINCREMENT,
 	username varchar(20) UNIQUE,
 	password varchar(10),
 	email varchar(50) UNIQUE,

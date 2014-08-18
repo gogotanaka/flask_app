@@ -1,9 +1,17 @@
 Pakopako
 ========
 
-## Setup envirionment
+## Setup environment and launch neo4j and flask server
+```
+$ chmod +x init.sh
+# required password in processes.
+$ sh init.sh
+```
+
+## Setup envirionment (old)
 
 ```
+$ brew bundle
 $ sudo pip install -r requirements.txt
 ```
 
@@ -19,7 +27,6 @@ $ cat apps/db/schema.sql | sqlite3 apps/db/pakopako.sqlite3
 ## Compile assets
 
 `sh apps/script/assets.sh`
-
 
 ## Directory structure
 
