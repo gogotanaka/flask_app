@@ -77,11 +77,3 @@ $ cat apps/db/schema.sql | sqlite3 apps/db/pakopako.sqlite3
 |
  -- server.py (script for up server)
 ```
-
-## Compile assets
-
-`sh apps/script/assets.sh`
-
-## Compile coffee
-
-`coffee -c apps/static/js/application.coffee`
