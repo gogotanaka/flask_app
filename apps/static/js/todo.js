@@ -1,5 +1,6 @@
-angular.module('todoApp', [])
-  .controller('TodoController', ['$scope', function($scope) {
+var pakopako = angular.module('todoApp', [])
+
+pakopako.controller('TodoController', ['$scope', function($scope) {
     $scope.todos = [
       {text:'learn angular', done:true},
       {text:'build an angular app', done:false}];
@@ -25,3 +26,9 @@ angular.module('todoApp', [])
       });
     };
   }]);
+
+
+pakopako.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('[[');
+  $interpolateProvider.endSymbol(']]');
+});

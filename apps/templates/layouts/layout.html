@@ -1,0 +1,18 @@
+<!doctype html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/todo.css') }}">
+        <script src="{{ url_for('static', filename='js/angular.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/todo.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+        <title>Flask-MVC</title>
+    </head>
+    <body>
+        {% macro render_error(field) %}
+            {% if field.errors %}
+                {% for error in field.errors %}<span class='error'>{{ error }}</span>{% endfor %}
+            {% endif %}
+        {% endmacro %}
+        {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>
