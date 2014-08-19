@@ -1,4 +1,9 @@
-var pakopako = angular.module('todoApp', [])
+var pakopako = angular.module('pakopako', [])
+
+pakopako.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('[[');
+  $interpolateProvider.endSymbol(']]');
+});
 
 pakopako.controller('TodoController', ['$scope', function($scope) {
     $scope.todos = [
@@ -28,7 +33,4 @@ pakopako.controller('TodoController', ['$scope', function($scope) {
   }]);
 
 
-pakopako.config(function($interpolateProvider) {
-  $interpolateProvider.startSymbol('[[');
-  $interpolateProvider.endSymbol(']]');
-});
+
