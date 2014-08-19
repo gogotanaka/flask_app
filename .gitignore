@@ -1,1 +1,3 @@
 .DS_Store
+apps/__pycache__/
+apps/controllers/__pycache__/
