@@ -1,9 +1,17 @@
 Pakopako
 ========
 
-## Setup envirionment
+## Setup environment and launch neo4j and flask server
+```
+$ chmod +x init.sh
+# required password in processes.
+$ sh init.sh
+```
+
+## Setup envirionment (old)
 
 ```
+$ brew bundle
 $ sudo pip install -r requirements.txt
 ```
 
