@@ -85,3 +85,7 @@ or
 ## Compile assets
 
 `sh apps/script/assets.sh`
+
+## Compile coffee
+
+`coffee -c apps/static/js/application.coffee`
