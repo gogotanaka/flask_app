@@ -1,6 +1,7 @@
 # coding: utf-8
-from apps import app
+from apps import app, db
 from flask.ext.login import LoginManager
+from datetime import datetime
 
 class User(db.Model):
 	__tablename__ = "users"

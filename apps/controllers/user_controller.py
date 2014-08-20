@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from apps import app
+from apps import app, db
 from flask import Flask, session, request, flash, url_for, redirect, render_template, abort, g
 from flask.ext.login import login_user, logout_user, current_user, login_required, LoginManager
+from apps.models.user import User
 
 login_manager = LoginManager()
 login_manager.init_app(app)
