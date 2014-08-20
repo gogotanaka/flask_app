@@ -1,25 +1,25 @@
 {% extends "layouts/layout.html" %}
 {% block body %}
-  <form action="{{ url_for('login') }}" method=post class="form-horizontal">
-    <h2>Signin to Application </h2>
-    <div class="control-group">
-        <div class="controls">
-          <input type="text" id="username" name="username" class="input-xlarge"
-            placeholder="Enter Username" required>
+    <form action="{{ url_for('login') }}" method=post class="form-horizontal">
+        <h2>Signin to Application </h2>
+        <div class="form-group">
+            <div class="controls">
+              <input type="text" id="username" name="username" class="form-control"
+                placeholder="Enter Username" required>
+            </div>
         </div>
-    </div>
 
-    <div class="control-group">
-        <div class="controls">
-          <input type="password" id="password" name="password" class="input-xlarge"
-            placeholder="Enter Password" required>
+        <div class="form-group">
+            <div class="controls">
+              <input type="password" id="password" name="password" class="form-control"
+                placeholder="Enter Password" required>
+            </div>
         </div>
-    </div>
 
-    <div class="control-group">
-        <div class="controls">
-          <button type="submit" class="btn btn-success">Signin</button>
+        <div class="form-group">
+            <div class="controls">
+              <button type="submit" class="btn btn-success">Signin</button>
+            </div>
         </div>
-    </div>
-  </form>
+    </form>
 {% endblock %}
