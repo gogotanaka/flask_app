@@ -4,7 +4,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URL'] = ''
+app.config['SQLALCHEMY_DATABASE_URL'] = 'sqlite:////db/pakopako.db'
 db = SQLAlchemy(app)
 
 app.config['SECRET_KEY'] = 'random'

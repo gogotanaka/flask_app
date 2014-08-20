@@ -1,6 +1,6 @@
 {% extends "layouts/layout.html" %}
 {% block body %}
-  <form action="" method=post class="form-horizontal">
+  <form action="{{ url_for('login') }}" method=post class="form-horizontal">
     <h2>Signin to Application </h2>
     <div class="control-group">
         <div class="controls">
