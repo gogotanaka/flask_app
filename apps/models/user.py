@@ -6,10 +6,21 @@ class User(db.Model):
 	username = db.Column('username', db.String(20), unique=True , index=True)
 	password = db.Column('password' , db.String(10))
 	email = db.Column('email',db.String(50),unique=True , index=True)
-	registered_on = db.Column('created_at' , db.DateTime)
+	created_at = db.Column('created_at' , db.DateTime)
 
 	def __init__(self , username ,password , email):
 		self.username = username
 		self.password = password
 		self.email = email
 		self.created_at = datetime.utcnow()
+
+from flask.ext.login import LoginManager
+
+login_manager = LoginManager()
+login_manager.init_appapp()
+
+login_manager.login_view = 'login'
+
+@login_manager.user_loader
+def load_user(id):
+	return User.query.get(int(id))
