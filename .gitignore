@@ -3,10 +3,7 @@ apps/__pycache__/
 apps/controllers/__pycache__/
 
 apps/static/js/application.js
-<<<<<<< HEAD
-=======
 
 apps/static/css/application.css.map
 apps/static/css/application.css
 .sass-cache/
->>>>>>> e4caf18444d3c0e341513391c3d3772d25dccce1

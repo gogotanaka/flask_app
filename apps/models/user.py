@@ -1,4 +1,6 @@
 # coding: utf-8
+from apps import app
+from flask.ext.login import LoginManager
 
 class User(db.Model):
 	__tablename__ = "users"
@@ -28,14 +30,3 @@ class User(db.Model):
 
 	def __repr__(self):
 		return '<User %r>' % (self.username)
-
-from flask.ext.login import LoginManager
-
-login_manager = LoginManager()
-login_manager.init_appapp()
-
-login_manager.login_view = 'login'
-
-@login_manager.user_loader
-def load_user(id):
-	return User.query.get(int(id))
