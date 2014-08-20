@@ -1,7 +1,7 @@
 Pakopako
 ========
 
-## Command to setup envirionment
+## Setup envirionment
 
 ```
 $ sudo pip install -r path/to/requirements.txt
@@ -15,25 +15,25 @@ or
 
 `$ python3 server.py`
 
-## Directory Structure
+## Directory structure
 
 ```
 .
 |
- -- apps
+ -- apps (main directory)
 |   |
 |   |-- controllers
 |       |
-|        -- __init__.py
+|        -- __init__.py (import all controllers in this directory)
 |       |
-|        -- prototype.py
+|        -- prototype.py (angularjs test files)
 |       |
-|        -- user_controller.py
+|        -- user_controller.py (user login and registration controller)
 |   |-- models
 |       |
-|        -- __init__.py
+|        -- __init__.py (import all models in this directory)
 |       |
-|        -- user.py
+|        -- user.py (user model)
 |   |-- static
 |       |
 |       |-- css
@@ -48,21 +48,25 @@ or
 |       |
 |       |-- layouts
 |           |
-|            -- layout.html
+|            -- layout.html (header and footer template; import static files in this)
 |       |-- prototype
 |           |
-|            -- index.html
+|            -- index.html (example angularjs view)
 |       |-- users
 |           |
 |            -- index.html
 |           |
 |            -- show.html
+|           |
+|            -- login.html
+|           |
+|            -- registration.html
 |    -- __init__.py
- -- Procfile
+ -- Procfile (setup commands on deploying to heroku production server)
 |
- -- requirements.txt
+ -- requirements.txt (required modules)
 |
- -- server.py
+ -- server.py (script for up server)
 ```
 
 ## Compile coffee
