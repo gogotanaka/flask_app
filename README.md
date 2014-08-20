@@ -4,12 +4,12 @@ Pakopako
 ## Setup envirionment
 
 ```
-$ sudo pip install -r path/to/requirements.txt
+$ sudo pip install -r requirements.txt
 ```
 
 ## Create local SQLite3 database
 ```
-$ cat ./apps/db/schema.sql | sqlite3 ./apps/db/pakopako.sqlite3
+$ cat apps/db/schema.sql | sqlite3 apps/db/pakopako.sqlite3
 ```
 
 ## Start server
