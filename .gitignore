@@ -1,3 +1,9 @@
 .DS_Store
 apps/__pycache__/
 apps/controllers/__pycache__/
+
+apps/static/js/application.js
+
+apps/static/css/application.css.map
+apps/static/css/application.css
+.sass-cache/

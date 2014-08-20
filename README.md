@@ -14,3 +14,8 @@ $ sudo pip install -r path/to/requirements.txt
 or
 
 `$ python3 server.py`
+
+
+## Compile assets
+
+`sh apps/script/assets.sh`
