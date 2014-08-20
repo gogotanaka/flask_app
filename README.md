@@ -15,7 +15,6 @@ or
 
 `$ python3 server.py`
 
-<<<<<<< HEAD
 ## Directory Structure
 
 ```
@@ -65,9 +64,7 @@ or
 |
  -- server.py
 ```
-=======
 
 ## Compile coffee
 
 `coffee -c apps/static/js/application.coffee`
->>>>>>> d7e44f369ab419247c3e622ce5993eb76158f5f4
