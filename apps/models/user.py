@@ -14,6 +14,21 @@ class User(db.Model):
 		self.email = email
 		self.created_at = datetime.utcnow()
 
+	def is_autherized(self):
+		return True
+
+	def is_active(self):
+		return True
+
+	def is_anonymous(self):
+		return True
+
+	def get_id(self):
+		return unicode(self.id)
+
+	def __repr__(self):
+		return '<User %r>' % (self.username)
+
 from flask.ext.login import LoginManager
 
 login_manager = LoginManager()
