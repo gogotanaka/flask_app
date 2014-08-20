@@ -1,4 +1,9 @@
 pakopako = angular.module("pakopako", [])
+<<<<<<< HEAD
+=======
+
+# {{ -> [[
+>>>>>>> e4caf18444d3c0e341513391c3d3772d25dccce1
 pakopako.config ($interpolateProvider) ->
   $interpolateProvider.startSymbol "[["
   $interpolateProvider.endSymbol "]]"
