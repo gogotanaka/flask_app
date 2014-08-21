@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import os
-from apps import app, db
-from apps.models.user import User
+from apps import app
 
 if __name__ == '__main__':
 	port = int(os.environ.get("PORT", 3000))

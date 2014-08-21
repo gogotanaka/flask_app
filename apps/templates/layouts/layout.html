@@ -1,35 +1,62 @@
 <!doctype html>
 <html ng-app="pakopako">
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/third_party/bootstrap.min.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/third_party/font-awesome.min.css') }}">
-        <script src="{{ url_for('static', filename='js/angular.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/application.js') }}"></script>
-        <title>Flask-MVC</title>
-    </head>
-    <body>
-    　　<div id='main-container'>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    {% if g.user.is_authenticated()%}
-                        <li><a href="/new">New Todo</a></li>
-                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                    {% endif %}
-                    {% if not g.user.is_authenticated()%}
-                        <li><a href="{{ url_for('login') }}">Login</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-            {% macro render_error(field) %}
-                {% if field.errors %}
-                    {% for error in field.errors %}<span class='error'>{{ error }}</span>{% endfor %}
-                {% endif %}
-            {% endmacro %}
-            {% block body %}{% endblock %}
-            </div>
+  <head>
+      <title>Pako Pako</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}">
+      <script src="{{ url_for('static', filename='js/angular.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/application.js') }}"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Pako Pako</a>
         </div>
-    </body>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!-- <li class="active"><a href="#">Link</a></li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            {% if g.user.is_authenticated()%}
+              <li><a href="{{ url_for('logout') }}">Logout</a></li>
+             <!--  <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Users <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </li> -->
+            {% endif %}
+            {% if not g.user.is_authenticated()%}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+　　<div id='main-container'>
+      {% macro render_error(field) %}
+          {% if field.errors %}
+            {% for error in field.errors %}<span class='error'>{{ error }}</span>{% endfor %}
+          {% endif %}
+      {% endmacro %}
+
+      {% block body %}
+      {% endblock %}
+    </div>
+  </body>
 </html>
