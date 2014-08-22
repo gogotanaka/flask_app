@@ -6,7 +6,7 @@ thirdParties = [
 pakopakoApp = ->
   pakopako = angular.module("pakopako", [])
 
-  # {{ -> [[
+  # Replace {{ -> [[
   pakopako.config ($interpolateProvider) ->
     $interpolateProvider.startSymbol "[["
     $interpolateProvider.endSymbol "]]"
@@ -51,6 +51,7 @@ pakopakoApp = ->
         return
   ]
 
+# Assign bowerjs
 loadScripts = (paths, callback) ->
   paths.forEach (path) ->
     url = "#{document.URL}static/js/bower_components/#{path}"
