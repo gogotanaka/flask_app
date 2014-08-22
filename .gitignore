@@ -4,6 +4,7 @@ apps/controllers/__pycache__/
 apps/models/__pycache__/
 
 apps/static/js/application.js
+apps/static/js/bower_components
 
 apps/static/css/application.css.map
 apps/static/css/application.css
