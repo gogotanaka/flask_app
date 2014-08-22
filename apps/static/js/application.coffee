@@ -1,12 +1,7 @@
-loadScript = (url, callback) ->
-  head = document.getElementsByTagName("head")[0]
-  script = document.createElement("script")
-  script.type = "text/javascript"
-  script.src = url
-  script.onreadystatechange = callback
-  script.onload = callback
-  head.appendChild script
-  return
+# Autoload third parties
+thirdParties = [
+  "angular/angular.min.js"
+]
 
 pakopakoApp = ->
   pakopako = angular.module("pakopako", [])
@@ -56,5 +51,16 @@ pakopakoApp = ->
         return
   ]
 
-url = document.URL + "static/js/bower_components/angular/angular.min.js"
-loadScript url, pakopakoApp
+loadScripts = (paths, callback) ->
+  paths.forEach (path) ->
+    url = "#{document.URL}static/js/bower_components/#{path}"
+    head = document.getElementsByTagName("head")[0]
+    script = document.createElement("script")
+    script.type = "text/javascript"
+    script.src = url
+    script.onreadystatechange = callback
+    script.onload = callback
+    head.appendChild script
+    return
+
+loadScripts thirdParties, pakopakoApp
