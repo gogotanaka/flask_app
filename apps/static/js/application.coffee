@@ -1,10 +1,12 @@
 # Autoload third parties
 thirdParties = [
   "angular/angular.min.js"
+  "famous/famous-global.js"
+  "famous-angular/dist/famous-angular.js"
 ]
 
 pakopakoApp = ->
-  pakopako = angular.module("pakopako", [])
+  pakopako = angular.module("pakopako", ['famous.angular'])
 
   # Replace {{ -> [[
   pakopako.config ($interpolateProvider) ->
