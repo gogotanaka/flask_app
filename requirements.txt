@@ -4,3 +4,4 @@ flask-sqlalchemy
 flask-neo4j
 flask_debugtoolbar
 flask-login
+Flask-PyMongo

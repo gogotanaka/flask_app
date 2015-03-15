@@ -1,12 +1,12 @@
 __version__ = '0.1'
 from flask import Flask
 from flask_debugtoolbar import DebugToolbarExtension
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask.ext.pymongo import PyMongo
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URL'] = 'sqlite:////apps/db/pakopako.sqlite3'
+mongo = PyMongo(app)
 app.config['SQLALCHEMY_ECHO'] = True
-db = SQLAlchemy(app)
+
 
 app.config['SECRET_KEY'] = 'random'
 app.debug = True
